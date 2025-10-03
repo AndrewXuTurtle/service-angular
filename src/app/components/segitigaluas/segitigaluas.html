@@ -1,0 +1,14 @@
+<div>
+  <h2>Hitung Luas Segitiga</h2>
+  
+  <label for="alas">Alas:</label>
+  <input id="alas" type="number" [(ngModel)]="alas" placeholder="Masukkan alas (cm)">
+  
+  <label for="tinggi">Tinggi:</label>
+  <input id="tinggi" type="number" [(ngModel)]="tinggi" placeholder="Masukkan tinggi (cm)">
+  
+  <button (click)="hitungLuas()">Hitung Luas</button>
+  
+  <p *ngIf="luas > 0">Luas Segitiga: {{ luas }} cm²</p>
+  <p *ngIf="luas === 0 && alas > 0 && tinggi > 0">Menghitung...</p>
+</div>

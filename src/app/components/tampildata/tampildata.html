@@ -1,0 +1,21 @@
+<div>
+  <h2>Daftar Quotes</h2>
+  <table border="1" cellpadding="6" cellspacing="0" style="width:100%; border-collapse:collapse;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Quote</th>
+        <th>Author</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (quote of quotes; track quote.id) {
+        <tr>
+          <td>{{ quote.id }}</td>
+          <td>{{ quote.quote }}</td>
+          <td>{{ quote.author }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
