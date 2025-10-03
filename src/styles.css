@@ -10,8 +10,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .section {
