@@ -1,14 +1,17 @@
 <div>
   <h2>Hitung Luas Segitiga</h2>
-  
-  <label for="alas">Alas:</label>
-  <input id="alas" type="number" [(ngModel)]="alas" placeholder="Masukkan alas (cm)">
-  
-  <label for="tinggi">Tinggi:</label>
-  <input id="tinggi" type="number" [(ngModel)]="tinggi" placeholder="Masukkan tinggi (cm)">
-  
-  <button (click)="hitungLuas()">Hitung Luas</button>
-  
-  <p *ngIf="luas > 0">Luas Segitiga: {{ luas }} cm²</p>
-  <p *ngIf="luas === 0 && alas > 0 && tinggi > 0">Menghitung...</p>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Alas (cm)</mat-label>
+    <input matInput type="number" [(ngModel)]="alas" placeholder="Masukkan alas">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Tinggi (cm)</mat-label>
+    <input matInput type="number" [(ngModel)]="tinggi" placeholder="Masukkan tinggi">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="hitungLuas()">Hitung Luas</button>
+
+  <p *ngIf="luas > 0" class="result">Luas Segitiga: {{ luas }} cm²</p>
 </div>

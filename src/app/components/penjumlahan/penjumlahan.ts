@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common'; 
+import { CommonModule } from '@angular/common';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { Penjumlahan1 } from '../../service/penjumlahan';
 
 @Component({
   selector: 'app-penjumlahan',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, MatFormFieldModule, MatInputModule, MatButtonModule],
   templateUrl: './penjumlahan.html',
   styleUrl: './penjumlahan.css'
 })

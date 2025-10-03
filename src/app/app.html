@@ -1,7 +1,44 @@
-<app-penjumlahan></app-penjumlahan>
+<mat-toolbar color="primary">
+  <span>Service Angular App</span>
+  <span class="spacer"></span>
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
 
-<app-segitigaluas></app-segitigaluas>
+<div class="container">
+  <div class="card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Penjumlahan</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <app-penjumlahan></app-penjumlahan>
+      </mat-card-content>
+    </mat-card>
+  </div>
 
-<app-tampildata></app-tampildata>
+  <div class="card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Luas Segitiga</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <app-segitigaluas></app-segitigaluas>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Tampil Data Quotes</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <app-tampildata></app-tampildata>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
