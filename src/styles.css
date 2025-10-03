@@ -7,25 +7,29 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
   padding: 20px;
-  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.card {
-  flex: 1 1 300px;
-  max-width: 400px;
+.section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #1976d2;
 }
 
 .result {
   font-weight: bold;
   color: #1976d2;
   margin-top: 10px;
-}
-
-mat-card {
-  padding: 16px;
 }
 
 mat-form-field {
