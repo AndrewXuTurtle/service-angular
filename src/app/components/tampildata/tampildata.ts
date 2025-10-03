@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { TampildataService } from '../../service/tampildata';
@@ -14,11 +14,12 @@ export class TampildataComponent implements OnInit {
   quotes: any[] = [];
   displayedColumns: string[] = ['id', 'quote', 'author'];
 
-  constructor(private tampildataService: TampildataService) {}
+  constructor(private tampildataService: TampildataService, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     this.tampildataService.getQuotes().subscribe(data => {
       this.quotes = data.quotes;
+      this.cdr.detectChanges(); // Fix ExpressionChangedAfterItHasBeenCheckedError
     });
   }
 }
